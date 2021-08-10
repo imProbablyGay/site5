@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="scss/style.css">
+    <!-- js -->
+    <script src="js/ourWorks.js" defer></script>
+    <script src="js/tilt.js"defer></script>
+    <script src="js/anchors.js" defer></script>
+    <script src="js/lazyLoad.js"defer></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- header -->
+<header class="header anchors-section" id="home">
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container navbar__content">
+          <a class="navbar-brand" href="#">Doob</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav scrollspy-items">
+              <li class="nav-item">
+                <a class="nav-link scrollspy-item _active" href="#home">Home.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollspy-item" href="#about-us">About us.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollspy-item" href="#portfolio">Portfolio.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollspy-item" href="#blog">Blog.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollspy-item last-scrollspy-item" href="#contact-us">Contact us.</a>
+              </li>
+            </ul>
+
+            <div class="navbar__sign-up">
+                <div class="dropdown navbar-dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="header-dropwown" data-bs-toggle="dropdown" aria-expanded="false">EN
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="header-dropwown">
+                      <li><a class="dropdown-item" href="#">EN</a></li>
+                    </ul>
+                  </div>
+                <div class="nav-item"><a class="navbar-contact-us scrollspy-item" href="#contact-us">Contact Us<img src="img/navbar-arrow.png" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="header__content container">
+        <div class="row header__row">
+            <div class="col-sm-7 col-md-6 col-xs-12 header__left lazy-load lazy-load_onload">
+                <h1 class="header__title">The Spirit of Digital Agency.</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit optio veritatis doloremque facere commodi.</p>
+
+                <div class="header__footer-buttons">
+                    <div class="header__more-about-us"><a href="#about-us" class="scrollspy-item">More About us</a></div>
+                    <div class="header__get-in-touch"><a href="#contact-us" class="scrollspy-item">Get In Touch.</a></div>
+                </div>
+            </div>
+
+            <div class="col-sm-5 col-md-6 col-xs-12 header__right">
+                <img src="img/header-bg.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar adaptive -->
+    <script>
+  
+        if (window.innerWidth > 992) {
+            let navbar = document.querySelector('.navbar');
+            
+          window.addEventListener('scroll' , (e) => {
+            if (pageYOffset > 50) {
+              navbar.classList.add('navbar-scrolled');
+            } else {
+              navbar.classList.remove('navbar-scrolled');
+            }
+          })
+        }
+      </script>
+  
+      <!-- burger -->
+      <script>
+        if (window.innerWidth < 992) {
+          let menu = document.querySelector('.navbar-toggler');
+          let menuBox = document.querySelector('.navbar-collapse');
+          let menuBoxItems = document.querySelectorAll('.nav-item');
+  
+          menuBoxItems.forEach(current => {
+              current.onclick = () => {
+                  menuBox.classList.remove('show');
+                  document.body.classList.remove('overflow-hidden');
+                  menu.classList.toggle('_active');
+              }
+          });
+  
+          menu.onclick = menuOpen;
+  
+          function menuOpen(e) {
+            menu.disabled = true;
+            setTimeout(() => {
+              menu.disabled = false;
+            }, 300);
+  
+            e.preventDefault();
+            document.body.classList.toggle('overflow-hidden');
+            menu.classList.toggle('_active');
+          }
+        }
+    </script>
+</header>
+
+<main>
+  <div class="bg-div">
+    <!-- skills -->
+    <section class="skills">
+      <div class="container">
+        <div class="skills__cards row">
+          <div class="col-lg-4 col-md-12 col-sm-12 skills__title">
+            <div class="section-title">
+              <h2>Anything you <br>need,we've<br> got you covered</h2>
+            </div>
+            <div class="skills__get-in-touch"><a href="#contact-us" class="btnAnim">Get in Touch</a></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 skills__card-container">
+            <div class="skills__card lazy-load">
+              <div class="skills__card-img"><img src="img/skills-card1.png" alt=""></div>
+              <h3>Web & Graphic Design</h3>
+              <p>Lorem ipsum dolor sit amet consectetur elit. Ratione optio reprehenderit dolorum aperiam labore, nihil unde fuga repudiandae minus adipisci.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 skills__card-container">
+            <div class="skills__card lazy-load">
+              <div class="skills__card-img"><img src="img/skills-card2.png" alt=""></div>
+              <h3>Web & App Development</h3>
+              <p>Lorem, ipsum  elit. Suscipit officia reiciendis dolore dicta quidem ex odio consequatur harum ad nostrum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about us -->
+    <section class="about-us anchors-section" id="about-us">
+      <div class="container">
+        <div class="about-us__content row">
+          <div class="col-md-6 col-sm-12 about-us__left">
+            <img src="img/about-us-img.png" alt="">
+          </div>
+          <div class="col-md-6 col-sm-12 about-us-right lazy-load">
+            <div class="section-title about-us__title">
+              <p>our company</p>
+              <h2>Some Fine<br> Words About Us</h2>
+            </div>
+            <div class="about-us__text">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit doloribus voluptas, omnis, porro, laborum voluptates amet voluptatum laboriosam consequatur<br> nesciunt vero culpa at ducimus quidem corrupti! Consequatur hic voluptate obcaecati?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="our-works anchors-section" id="portfolio">
+    <div class="container">
+      <div class="section-title our-works__title row">
+        <h2>See some of<br> our Creative work.</h2>
+      </div>
+
+      <div class="our-works__container row">
+        <!-- add elems in js -->
+      </div>
+
+      <div class="add-works-btn"><span>See More of These.</span></div>
+    </div>
+  </section>
+
+  <!-- news -->
+  <section class="news anchors-section" id="blog">
+    <div class="container">
+      <div class="section-title news__title row">
+        <p>blog stories</p>
+        <h2>Check Our News</h2>
+      </div>
+
+      <div class="news__container row">
+        <div class="col-md-4 col-sm-12">
+          <div class="news__item lazy-load" data-img="https://cdn.pixabay.com/photo/2020/05/15/14/03/lake-5173683_960_720.jpg">
+            <h4 class="news__title">New Adventure</h4>
+            <span class="news__date">17 March 2021</span>
+            <p class="news__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde accusamus sint mollitia qui quas minima perspiciatis magni voluptas ratione.</p>
+            <div class="news__open"><img src="img/navbar-arrow.png" alt=""></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <div class="news__item lazy-load" data-img="https://cdn.pixabay.com/photo/2021/06/06/12/13/eye-6315225_960_720.jpg">
+            <h4 class="news__title">New Adventure</h4>
+            <span class="news__date">17 March 2021</span>
+            <p class="news__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde accusamus sint mollitia qui quas minima perspiciatis magni voluptas ratione.</p>
+            <div class="news__open"><img src="img/navbar-arrow.png" alt=""></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <div class="news__item lazy-load" data-img="https://cdn.pixabay.com/photo/2020/05/15/14/03/lake-5173683_960_720.jpg">
+            <h4 class="news__title">New Adventure</h4>
+            <span class="news__date">17 March 2021</span>
+            <p class="news__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde accusamus sint mollitia qui quas minima perspiciatis magni voluptas ratione.</p>
+            <div class="news__open"><img src="img/navbar-arrow.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- news modal -->
+  <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newsModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span></span>
+          <div class="modal-img"><img src="" alt=""></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-close__footer" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      let newsItems = document.querySelector('.news__container');
+      let newsModal = new bootstrap.Modal(document.getElementById('newsModal'))
+      let newsModalElem = document.querySelector('#newsModal');
+
+      newsItems.addEventListener('click', openModal);
+
+      function openModal(e) {
+        if (e.target.tagName == 'IMG') {
+          // create modal and open it
+          let parentElem = e.target.parentNode.parentNode;
+          let title = parentElem.querySelector('.news__title').innerHTML;
+          let text = parentElem.querySelector('.news__text').innerHTML;
+          let img = parentElem.dataset.img;
+
+          newsModalElem.querySelector('.modal-title').innerHTML = title;
+          newsModalElem.querySelector('.modal-body span').innerHTML = text;
+          newsModalElem.querySelector('.modal-img img').src = img;
+
+          newsModal.show()
+        }
+      }
+    })();
+  </script>
+
+  <!-- contact -->
+  <section class="contact anchors-section" id="contact-us">
+    <div class="container">
+      <div class="section-title contact__title row">
+        <p>contact us</p>
+        <h2>Get in Touch</h2>
+      </div>
+  
+      <form action="" class="contact__form row">
+        <div class="contact__input col-md-6 col-sm-12">
+          <input type="email" placeholder="Your email">
+        </div>
+        <div class="contact__input col-md-6 col-sm-12">
+          <input type="text" placeholder="Subject">
+        </div>
+        <div class="contact__textarea">
+          <textarea placeholder="Message here..."></textarea>
+        </div>
+        <div class="contact__send"><button class="btnAnim" type='submit'>Send Message</button></div>
+      </form>
+    </div>
+  </section>
+
+   <!-- contact send Modal -->
+   <div class="modal fade" id="contact-send__modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#contact-send__modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Message has been sent!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-close__footer" data-bs-dismiss="modal">ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- get answers from form -->
+<script>
+  let currentForm = document.querySelector('.contact__form');
+  
+
+  currentForm.onsubmit = (e) => {
+    e.preventDefault();
+
+    // check inputs
+    let formElems = document.querySelectorAll('.contact__input input');
+    let result = [];
+    let errors = 0;
+
+    for (let item of formElems) {
+      if (item.type == 'email' && !item.value.includes('@')) {
+        item.style.background = 'rgba(255,57,70,.4)';
+        errors++;
+      } else if (item.value == '') {
+        item.style.background = 'rgba(255,57,70,.4)';
+        errors++;
+      }
+    }
+
+    if (errors != 0) return false;
+
+    // add answers to array
+    for (let item of formElems) {
+      result.push(item.value)
+    }
+
+    // if textarea value add to result
+    let textarea = document.querySelector('.contact__textarea textarea');
+    if (textarea.value) result.push(textarea.value);
+
+     // reset values
+     currentForm.querySelectorAll('input').forEach(el => {
+        el.value = '';
+        el.style.background = '';
+      })
+
+    console.log(result);
+
+    // show modal
+    var myModal = new bootstrap.Modal(document.getElementById('contact-send__modal'), {
+      keyboard: false
+    })
+
+    myModal.show();
+  }
+</script>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row footer__content">
+      <span>DOOB</span>
+      <div class="footer__title">CREATIVITY ABOVE</div>
+      <div class="footer__sections">
+        <a href='#home' class="footer__section scrollspy-item">Home.</a>
+        <a href='#about-us' class="footer__section scrollspy-item">About Us.</a>
+        <a href='#portfolio' class="footer__section scrollspy-item">Portfolio.</a>
+        <a href='#blog' class="footer__section scrollspy-item">Blog.</a>
+        <a href='#contact-us' class="footer__section scrollspy-item">Contact us.</a>
+      </div>
+      <div class="footer__copy-right">&copy; 2019 - Doob,All Right Reserved</div>
+      <div class="footer__links">
+        <a href="#"><img src="img/footer-link1.png" alt=""></a>
+        <a href="#"><img src="img/footer-link2.png" alt=""></a>
+        <a href="#"><img src="img/footer-link3.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
